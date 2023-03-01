@@ -3,10 +3,13 @@ import ru.synergy.Cat;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 
 public class Main {
     public static void main(String[] args) {
 
+         //Arrays
+/*
 
       Cat[]  cats = new Cat[3];
       cats[0]=new Cat("Tomas");
@@ -16,8 +19,11 @@ public class Main {
      // cats[1]=null;
 
         System.out.println(Arrays.toString(cats));
+*/
 
-        ArrayList<Cat> catsList = new ArrayList<>();
+
+              //Arraylist
+        /*ArrayList<Cat> catsList = new ArrayList<>();
          for (Cat cat:cats){
              catsList.add(cat);
          }
@@ -37,6 +43,23 @@ public class Main {
         System.out.println(catsList.toString());
 
         System.out.println(catsList.size());
+*/
+
+        // LinkedList
+
+        String str1= new String("Hello World!");
+        String str2= new String("my name is Anna");
+        String str3= new String("I love is java");
+
+        LinkedList<String> AnnaBio = new LinkedList<>();
+        AnnaBio.add(str1);
+        AnnaBio.add(str2);
+        AnnaBio.add(str3);
+
+        System.out.println(AnnaBio);
+        AnnaBio.remove(1);
+        System.out.println(AnnaBio);
+
 
 
 
