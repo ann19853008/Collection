@@ -5,11 +5,12 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
 
-         //Arrays
+        //Arrays
 /*
 
       Cat[]  cats = new Cat[3];
@@ -23,7 +24,7 @@ public class Main {
 */
 
 
-              //Arraylist
+        //Arraylist
         /*ArrayList<Cat> catsList = new ArrayList<>();
          for (Cat cat:cats){
              catsList.add(cat);
@@ -62,9 +63,9 @@ public class Main {
         System.out.println(AnnaBio);
 */
 
-       //LinkedList on practice
+        //LinkedList on practice
 
-        LinkedList<Car> cars = new LinkedList<>();
+      /*  LinkedList<Car> cars = new LinkedList<>();
         Car ferrari = new Car("Ferrari spider");
         Car bugatti = new Car("Veyron");
         Car mercedes = new Car("Benz");
@@ -77,8 +78,37 @@ public class Main {
         cars.addFirst(new Car("Ford"));
         cars.addLast(new Car("Feat"));
         System.out.println(cars.pollFirst());
-        System.out.println(cars);
+        System.out.println(cars);*/
 
+
+        // Arraylist  vs LinkedList
+
+        List<Integer> list = new LinkedList<>();
+        for (int i = 0; i < 5000000; i++) {
+            list.add(new Integer(1));
+
+        }
+        long start = System.currentTimeMillis();
+
+        for (int i = 0; i < 100; i++) {
+            list.add(2000000, Integer.MAX_VALUE);
+        }
+        System.out.println("Время работы для LinkedList в (миллисекундах)" +
+                (System.currentTimeMillis()-start));
+
+
+         list = new ArrayList<>();
+        for (int i = 0; i < 5000000; i++) {
+            list.add(new Integer(1));
+
+        }
+         start = System.currentTimeMillis();
+
+        for (int i = 0; i < 100; i++) {
+            list.add(2000000, Integer.MAX_VALUE);
+        }
+        System.out.println("Время работы для ArrayList в (миллисекундах)" +
+                (System.currentTimeMillis()-start));
 
 
     }
